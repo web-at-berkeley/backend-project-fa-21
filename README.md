@@ -13,7 +13,7 @@ immediately. The Gradescope course code is `YV5D4N`. You will see two different 
 `Frontend Technical Project` and `Backend Technical Project`. _Please only submit to Backend
 Technical Project._ You can ignore Frontend Technical Project.
 
-The technical project will be due at +++++++. We will be unable to respond to clarification emails sent in after +++++++, so if you have any questions about the project, please let us know before then. 
+The technical project will be due at this Saturday (Sep. 11th) at midnight. We will be unable to respond to clarification emails sent in after then. so if you have any questions about the project, please let us know before then. 
 
 
 ## Introduction
@@ -161,7 +161,7 @@ _Hint: Access Token_
 
 There are many details that are left intentionally vague. Though you are very much welcome to
 email us to ask for clarifications, we will most likely tell you to use your best judgement.
-Because of this, we have provided a file called `assumptions.md` where you can type out and
+Because of this, feel free to create a `assumptions.md, where you can type out and
 voice any assumptions you made throughout this project. We also _highly_ encourage you to
 write out your own documentation to this API and provide us a glimpse of your rationale
 behind every design decision.
