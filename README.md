@@ -105,28 +105,43 @@ Matchings = {
 }
 ```
 
-### Deleting a Fruit or Furniture (`DELETE`)
+### Deleting a Vege (`DELETE`)
 
-Finally, for the last piece of this delicious pie, we need to delete data from our hybrid
-database model. For the third and final time, we chatted with our favorite Stanfurd student
-about how they would approach this:
-
+The Cats in the Sky Company also asks us to come up with a way to delete any vege in case any cat has some hidden alergies. To delete a vege, similarly to adding a cat / vege, the user needs to send a DELETE request, with body containing the name of the vege like this: 
 ```
-omg i told you already i cant even add fruits
-
-and now you want me to delete them????
+{
+  "vege": ["Orange"]
+}
 ```
 
-Thank you Stanfurd very cool. Consulting with Fry-Kea instead, you both agree that there
-are too many recipes to migrate from the Stanfurd database given the project deadline and
-opt instead to keeping this hybrid model to the very end. Thus you come up with the following
-scheme:
+There are two different cases for DELETE:
+1. If the vege is one of the veges returned by the vege API, track it inside the database, and make sure that when calling `GET`, that vege will not be considered during the matching process.
+2. If the vege is not one of the veges returned by the vege API, simply remove it from the database.
 
-- If a record from the internal database needs to be deleted, just delete it.
-- If a record from the Stanfurd database needs to be deleted, _keep track of these records
-and do not return them in the get request._
-- If a record will be added and the recipe matches a deleted entry in the Stanfurd database,
-_untrack this record and begin returning them again in the get request._
+Here's a example of the first case:
+```
+# Returned by API
+cats = ["Alex", "Abhi", "Samarth"]
+veges = ["Artichoke", "Asparagus", "Green Beans", "Squash"]
+
+# First Get
+Matchings = {
+  "Alex": ["Artichoke", "Asparagus"],
+  "Abhi": ["Artichoke", "Asparagus"],
+  "Samarth": ["Squash"],
+}
+
+# Send the DELETE request
+DELETE: {
+  "vege": "Squash"
+}
+
+# GET after DELETE
+Matchings = {
+  "Alex": ["Artichoke", "Asparagus"],
+  "Abhi": ["Artichoke", "Asparagus"],
+}
+```
 
 ## Assumptions
 
