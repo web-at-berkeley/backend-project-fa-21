@@ -9,7 +9,7 @@ please reach out to [our email](webatberkeley@gmail.com).
 To submit your project, please place your submission into a GitHub repo that is set to private. You
 will be submitting your code on [Gradescope](https://www.gradescope.com/). If you do not have a 
 Gradescope account, please create one and if you are unable to create one, please email us
-immediately. The Gradescope course code is `+++++++`. You will see two different assignments: 
+immediately. The Gradescope course code is `BP347P`. You will see two different assignments: 
 `Frontend Technical Project` and `Backend Technical Project`. _Please only submit to Backend
 Technical Project._ You can ignore Frontend Technical Project.
 
