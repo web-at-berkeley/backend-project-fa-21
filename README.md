@@ -153,7 +153,7 @@ Matchings = {
 Some evil customers are trying to delete our cats by sending DELETE request to our server! Stop them from doing that by building a user authentication system. The system should support the following functionality:
 1. Sign Up: the user should be able to sign up via a POST request, containing the {"username": "name","pwd": "password"} request body.
 2. Sign In: the user should be able to sign in via a POST request, containing the {"username": "name","pwd": "password"} request body.
-4. The DELETE route can only be accessed if the user is signed in.
+3. The DELETE route can only be accessed if the user is signed in.
 
 _Hint: Access Token_
 
