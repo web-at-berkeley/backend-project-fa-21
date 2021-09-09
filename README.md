@@ -74,27 +74,36 @@ Matchings = {
 
 ### Adding A Cat or a Vege (`POST`)
 
-For adding a recipe, we chatted with the Stanfurd student and they had this to say:
+Besides the list of cats & veges that they already have, the Cats in the Sky Company also wants to be able to add new cat / new vege easily. However, it turns out they don't have any space to store any data at all! We need to create a database for them and store all the cat / vege that they want to add.
+
+This should be a POST endpoint that allow the users to add new cat / new vege by including the information in the post body.
+For instance, if the user wants to add a cat called "Alice", they need to send a POST request with the following body:
+```
+{
+  "cat": "Alice",
+}
+```
+
+Similarly, if the user wants to add a vege, they need to send a POST request with a body containing `"vege": "name of vege"` as well.
+
+Once the user sends a POST request, the data should be stored in a database. In the future, if the user call the "GET" endpoint again, we need to take the newly added data into account as well.
+
+For instance:
+if we have:
+```
+cats = ["Alex", "Abhi", "Samarth"]
+veges = ["Artichoke", "Asparagus", "Onion", "Green Beans", "Squash"]
+```
+returned from the APIs, and the user decides to add a cat named "Oliver", then if the user send a GET request again, they should receive:
 
 ```
-wait you want to ADD a new Fruitniture?
-
-bro wtf i cant even return fuirnitures correctly
-
-your on youre own dude
+Matchings = {
+  "Alex": ["Artichoke", "Asparagus"],
+  "Abhi": ["Artichoke", "Asparagus"],
+  "Samarth": ["Squash"],
+  "Oliver": ["Onion"]
+}
 ```
-
-Sadly, Stanfurd CS (and grammar for that matter) has failed them and we have to take it 
-upon ourselves to host the data. In addition to queuing data from the endpoint that the Stanfurd
-student provided _we will need to host additional data on our own servers to create a hybrid
-data model_. Whenever a new fruit, a new furniture, or a new Fruitniture is posted to our API, _store this new data in a database
-of your choice_ rather than attempting to edit the Stanfurd database. 
-
-For the hybrid data model that you will be creating, remember that the user can choose to add a fruit, a furniture, or a combination of fruitniture. 
-This means that if a new fruit is added, say blackberry. When using the "GET" endpoint, any furniture that starts with "b" provided by the Stanford API needs
-to also join the newly added blackberry as well. This is the same for any newly added furniture. 
-
-For fruitniture, both the fruit and the furniture need to be able to join with any other existing fruit and furniture as well!
 
 ### Deleting a Fruit or Furniture (`DELETE`)
 
