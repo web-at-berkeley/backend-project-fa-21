@@ -72,6 +72,9 @@ Matchings = {
 
 ```
 
+*Corner Case*: 
+1. if a cat does not have any favorite veges, please return the cat with an empty list. `{"Bob": []}`
+
 ### Adding A Cat or a Vege (`POST`)
 
 Besides the list of cats & veges that they already have, the Cats in the Sky Company also wants to be able to add new cat / new vege easily. However, it turns out they don't have any space to store any data at all! We need to create a database for them and store all the cat / vege that they want to add.
@@ -142,6 +145,17 @@ Matchings = {
   "Abhi": ["Artichoke", "Asparagus"],
 }
 ```
+
+## Optional: Authentication
+
+*This is an extra credit question. Please prioritize solving the other questions before attempting this question.*
+
+Some evil customers are trying to delete our cats by sending DELETE request to our server! Stop them from doing that by building a user authentication system. The system should support the following functionality:
+1. Sign Up: the user should be able to sign up via a POST request, containing the {"username": "name","pwd": "password"} request body.
+2. Sign In: the user should be able to sign in via a POST request, containing the {"username": "name","pwd": "password"} request body.
+4. The DELETE route can only be accessed if the user is signed in.
+
+_Hint: Access Token_
 
 ## Assumptions
 
