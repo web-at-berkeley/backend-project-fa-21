@@ -1,3 +1,21 @@
+# Note: If you're here for the Frontend SP '22 Interview, please navigate to [this link](https://github.com/web-at-berkeley/frontend-project-sp-22) at 10AM on 1/30!
+## Sorry about that!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Cats in the Sky
 
 ## Submission Instructions
